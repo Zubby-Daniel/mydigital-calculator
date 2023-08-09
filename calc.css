@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --BGCOLOR1: #c0b6aee1;
+  --BGCOLOR2: #03234de0;
+  --Floralwhite: #fffaf0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: var(--BGCOLOR1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+article {
+  width: 50%;
+  background: var(--BGCOLOR2);
+  border-radius: 5px;
+}
+/* Reset & Input Section */
+.reset__input-mainsection {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#num1,
+#num2 {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--Floralwhite);
+}
+
+#num2 {
+  margin-top: 1rem;
+}
+
+#rset {
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  background: var(--Floralwhite);
+}
+
+.rsult {
+  padding: 1rem 1rem 1rem 0;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.rslt__paragraph {
+  color: var(--Floralwhite);
+}
+
+/* Arithemetic Operators */
+.arithemetic__operators {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.arithemetic__operators input {
+  background: #c3ccd8;
+  padding: 1rem 2rem;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 0.9rem;
+}
+
+/* Copy Write */
+
+.copywrite {
+  padding: 1rem 0;
+  color: var(--Floralwhite);
+}
+
+/* Media Queries */
+@media (max-width: 640px) {
+  .reset__input-mainsection {
+    display: flex;
+    flex-direction: column;
+  }
+  .arithemetic__operators {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .reset {
+    display: none;
+  }
+  .hidden {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  .hidden #rset {
+    width: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .reset__input-mainsection #num1,
+  .reset__input-mainsection #num2 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 607px) {
+  body {
+    background: var(--BGCOLOR2);
+  }
+  article {
+    background: var(--BGCOLOR1);
+    height: 35rem;
+    padding: 0;
+  }
+  .arithemetic__operators {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arithemetic__operators input {
+    background: var(--Floralwhite);
+  }
+
+  .reset {
+    display: none;
+  }
+  .hidden {
+    display: block;
+    width: 40%;
+    margin: auto;
+  }
+  .rslt__paragraph,
+  .copywrite {
+    color: var(--BGCOLOR2);
+  }
+}
